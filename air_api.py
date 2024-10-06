@@ -20,19 +20,6 @@ def get_pm():
         return response.json()[0]['pm02']
     return -1
 
-def store_pm():
-    pm_val = get_pm()
-    if pm_val != -1:
-        pm_store.append(pm_val)
-    if(len(pm_store) > 2):
-        if pm_store[len(pm_store)-1]>=10 & pm_store[len(pm_store)-2]>=10 :
-            send_alert()
-    print(f"previous pm values: {pm_store}")
-
-#hook this up to twilio when the rest is working.
-def send_alert():
-    print("Alert")
-
 if __name__ == "__main__":
     # Start up the server to expose the metrics.
     g = Gauge('air_quality_test', 'Levels of PM 2.5')

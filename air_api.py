@@ -7,7 +7,6 @@ import os
 
 AIR_TOKEN = os.environ["AIR_GRADIENT_TOKEN"]
 AIR_BASE_URL = "https://api.airgradient.com/public/api/v1/"
-AIR_PLACE = "6890" #e19713? or 6890? neither work
 headers = {"Content-Type":"application/json"}
 
 pm_store = []
